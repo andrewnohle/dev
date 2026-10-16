@@ -1,0 +1,16 @@
+{
+  "id": "QurWgL3TbupLz7OK",
+  "name": "Header Auth account",
+  "type": "httpHeaderAuth",
+  "data": {
+    "name": "",
+    "value": ""
+  },
+  "ownedBy": {
+    "type": "personal",
+    "projectId": "1xv99w6Tr0xKD30Q",
+    "projectName": "Sarah Kirkpatrick <sekirkpatrick7@gmail.com>",
+    "personalEmail": "sekirkpatrick7@gmail.com"
+  },
+  "isGlobal": false
+}

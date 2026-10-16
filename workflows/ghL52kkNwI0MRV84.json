@@ -1,0 +1,83 @@
+{
+  "id": "ghL52kkNwI0MRV84",
+  "name": "Simple HTTP call with credential",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://mockingbird.n8n.io/v1/products?page=1&limit=50&paginate=true'https://mockingbird.n8n.io/v1/products?page=1&limit=50&paginate=true",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key",
+              "value": "mb_fAwTcJ4jtHfEzePgFrHc72"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ebfaf018-1d20-4bc2-98ef-633f85e0b611",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        224,
+        0
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "QurWgL3TbupLz7OK",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "7edbc94a-cb36-42e7-88c2-692f422c29bc",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "triggerCount": 1,
+  "versionId": "30517640-fafa-44b9-a334-e07c7550a47d",
+  "owner": {
+    "type": "personal",
+    "projectId": "1xv99w6Tr0xKD30Q",
+    "projectName": "Sarah Kirkpatrick <sekirkpatrick7@gmail.com>",
+    "personalEmail": "sekirkpatrick7@gmail.com"
+  },
+  "parentFolderId": null,
+  "isArchived": false,
+  "nodeGroups": []
+}
