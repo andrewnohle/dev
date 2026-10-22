@@ -1,6 +1,7 @@
 {
   "id": "ghL52kkNwI0MRV84",
   "name": "Simple HTTP call with credential",
+  "description": null,
   "nodes": [
     {
       "parameters": {
@@ -49,6 +50,19 @@
       ],
       "id": "7edbc94a-cb36-42e7-88c2-692f422c29bc",
       "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        448,
+        0
+      ],
+      "id": "b76d38d8-c721-4a9f-937b-3a829c2092b8",
+      "name": "AI Agent"
     }
   ],
   "connections": {
@@ -62,6 +76,17 @@
           }
         ]
       ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "settings": {
@@ -70,12 +95,12 @@
     "availableInMCP": false
   },
   "triggerCount": 1,
-  "versionId": "30517640-fafa-44b9-a334-e07c7550a47d",
+  "versionId": "d15cd975-ffaa-4e9a-a113-f7094695267e",
   "owner": {
     "type": "personal",
-    "projectId": "1xv99w6Tr0xKD30Q",
-    "projectName": "Sarah Kirkpatrick <sekirkpatrick7@gmail.com>",
-    "personalEmail": "sekirkpatrick7@gmail.com"
+    "projectId": "72EeXPbhGOgTBKWt",
+    "projectName": "Andrew Nohle <andrew.nohle@n8n.io>",
+    "personalEmail": "andrew.nohle@n8n.io"
   },
   "parentFolderId": null,
   "isArchived": false,
